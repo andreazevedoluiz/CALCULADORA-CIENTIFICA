@@ -16,46 +16,47 @@
             <p id="resultado"></p>
             <table>
                 <tr>
-                    <td><button onclick="clean()">c</button></td>
-                    <td><button onclick="back()"><</button></td>
-                    <td><button onclick="calcular()">=</button></td>
-                    <td><button onclick="insert('π')">π</button></td>
-                    <td><button onclick="insert('%')">%</button></td>
+                    <td><input type="button" class="botao" value="C" onclick="this.form.display.value= 0"></td>
+                    <td><input type="button" class="botao" value="<--" onclick="deleteChar(this.form.display)"></td>
+                    <td><input type="button" class="botao" value="=" onclick="if(checkNum(this.form.display.value)) {compute(this.form)}"></td>
+                    <td><input type="button" class="botao" value="π" onclick="addChar(this.form.display, '3.14159265359')"></td>
+                    <td><input type="button" class="botao" value="%" onclick="percent(this.form.display)"></td>  
                 </tr>
                 <tr>
-                    <td><button onclick="insert('7')">7</button></td>
-                    <td><button onclick="insert('8')">8</button></td>
-                    <td><button onclick="insert('9')">9</button></td>
-                    <td><button onclick="insert('x^')">x^</button></td>
-                    <td><button onclick="insert('/')">/</button></td>
+                    <td><input type="button" class="botao" value="7" onclick="addChar(this.form.display, '7')"></td>
+                    <td><input type="button" class="botao" value="8" onclick="addChar(this.form.display, '8')"></td>
+                    <td><input type="button" class="botao" value="9" onclick="addChar(this.form.display, '9')"></td>
+                    <td><input type="button" class="botao" value="X^" onclick="if(checkNum(this.form.display.value)) { exp(this.form)}"></td>
+                    <td><input type="button" class="botao" value="/" onclick="addChar(this.form.display, '/')"></td>
                 </tr>
                 <tr>
-                    <td><button onclick="insert('4')">4</button></td>
-                    <td><button onclick="insert('5')">5</button></td>
-                    <td><button onclick="insert('6')">6</button></td>
-                    <td><button onclick="insert('In')">In</button></td>
-                    <td><button onclick="insert('*')">*</button></td>
+                    <td><input type="button" class="botao" value="4" onclick="addChar(this.form.display, '4')"></td>
+                    <td><input type="button" class="botao" value="5" onclick="addChar(this.form.display, '5')"></td>
+                    <td><input type="button" class="botao" value="6" onclick="addChar(this.form.display, '6')"></td>
+                    <td><input type="button" class="botao" value="In" onclick="if(checkNum(this.form.display.value)) {In(this.form)}"></td>
+                    <td><input type="button" class="botao" value="*" onclick="addChar(this.dorm.display, '*')"></td>
                 </tr>
                 <tr>
-                    <td><button onclick="insert('1')">1</button></td>
-                    <td><button onclick="insert('2')">2</button></td>
-                    <td><button onclick="insert('3')">3</button></td>
-                    <td><button onclick="insert('√')">√</button></td>
-                    <td><button onclick="insert('-')">-</button></td>
+                    <td><input type="button" class="botao" value="1" onclick="addChar(this.form.display, '1')"></td>
+                    <td><input type="button" class="botao" value="2" onclick="addChar(this.form.display, '2')"></td>
+                    <td><input type="button" class="botao" value="3" onclick="addChar(this.form.display, '3')"></td>
+                    <td><input type="button" class="botao" value="√" onclick="if(checkNum(this.form.display.value)) {sqrt(this.form)}"></td>
+                    <td><input type="button" class="botao" value="-" onclick="addChar(this.form.display, '-')"></td>
+                    
                 </tr>
                 <tr>
-                    <td><button onclick="insert('±')">±</button></td>
-                    <td><button onclick="insert('0')">0</button></td>
-                    <td><button onclick="insert('.')">.</button></td>
-                    <td><button onclick="insert('X2')">X2</button></td>
-                    <td><button onclick="insert('+')">+</button></td>
+                    <td><input type="button" class="botao" value="&#177" onclick="chnageSign(this.form.display)"></button></td>
+                    <td><input type="button" class="botao" value="0" onclick="addChar(this.form.display, '0')"></td>
+                    <td><input type="button" class="botao" value="." onclick="addChar(this.form.display, '.')"></td>
+                    <td><input type="button" class="botao" value="X2" onclick="if(checkNum(this.fomr.display.value)) {square(this.form)"></td>
+                    <td><input type="button" class="botao" value="+" onclick="addChar(this.form.display, '+')"></td>
                 </tr>
                 <tr>
-                    <td><button onclick="insert('(')">(</button></td>
-                    <td><button onclick="insert(')')">)</button></td>
-                    <td><button onclick="insert('COS')">COS</button></td>
-                    <td><button onclick="insert('SIN')">SIN</button></td>
-                    <td><button onclick="insert('TAN')">TAN</button></td>
+                    <td><input type="button"class="botao" value="(" onclick="addChar(this.form.display, '(' )"></td>
+                    <td><input type="button"class="botao" value=")" onclick="addChar(this.form.display, ')' )"></td>
+                    <td><input type="button" class="botao" value="COS" onclick="if(checkNum(this.form.display.value)) {cos(this.form)}"></td>
+                    <td><input type="button" class="botao" value="SIN" onclick="if(checkNum(this.form.display.value)) {sin(this.form)}"></td>
+                    <td><input type="button" class="botao" value="TAN" onclick="if(checkNum(this.form.display.value)) {tan(this.form)}"></td>
                 </tr>
             </table>
         </div>
